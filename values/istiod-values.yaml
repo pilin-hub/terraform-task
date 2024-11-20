@@ -1,0 +1,17 @@
+global:
+  istioNamespace: istio-system
+  logging:
+    level: "default:info"  
+pilot:
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "256Mi"
+    limits:
+      cpu: "1000m"
+      memory: "512Mi"
+meshConfig:
+  accessLogFile: "/dev/stdout"  
+  enableTracing: true           
+telemetry:
+  enabled: true
